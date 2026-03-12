@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Jacks — Taste the Mystery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap');
+
+    :root {
+      --orange: #F47B20;
+      --green: #5BBD2F;
+      --yellow: #FFD700;
+      --red: #E8272A;
+      --dark: #1A1A1A;
+      --light: #FFFDF5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 48px;
+      background: var(--orange);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2rem;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    .nav-logo span { color: var(--green); }
+
+    nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    nav ul a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover { color: var(--yellow); }
+
+    .nav-cta {
+      background: var(--green);
+      color: white !important;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-weight: 900 !important;
+      transition: transform 0.2s, background 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: #4aa826 !important;
+      transform: scale(1.05);
+      color: white !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      background: linear-gradient(135deg, #FF8C00 0%, #F47B20 40%, #FFB347 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 48px;
+    }
+
+    .hero-bubbles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: float linear infinite;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(110vh) rotate(0deg); }
+      100% { transform: translateY(-10vh) rotate(360deg); }
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+      max-width: 780px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      font-weight: 900;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      color: white;
+      line-height: 1.05;
+      text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 em {
+      color: var(--green);
+      font-style: normal;
+      display: block;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: rgba(255,255,255,0.92);
+      max-width: 540px;
+      margin: 0 auto 36px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      padding: 16px 40px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 6px 0 #3a8a1c;
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 #3a8a1c;
+    }
+
+    .btn-primary:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 #3a8a1c;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--orange);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      padding: 16px 40px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 rgba(0,0,0,0.15);
+    }
+
+    /* Floating rings */
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      border-width: 12px;
+      border-style: solid;
+      animation: spin linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+    }
+
+    /* ── MYSTERY SECTION ── */
+    .mystery {
+      background: var(--dark);
+      padding: 100px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mystery::before {
+      content: '?';
+      position: absolute;
+      font-family: 'Fredoka One', cursive;
+      font-size: 40vw;
+      color: rgba(255,255,255,0.03);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .section-label {
+      font-weight: 900;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .mystery h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .mystery h2 span { color: var(--orange); }
+
+    .mystery p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      line-height: 1.7;
+    }
+
+    .mystery-quote {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      border-left: 6px solid var(--orange);
+      padding: 24px 36px;
+      border-radius: 12px;
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: white;
+      max-width: 700px;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mystery-quote cite {
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem;
+      font-style: normal;
+      color: var(--orange);
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      padding: 100px 48px;
+      background: var(--light);
+    }
+
+    .features-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .features-header h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--dark);
+    }
+
+    .features-header h2 span { color: var(--orange); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border: 3px solid transparent;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--orange);
+    }
+
+    .card-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .card h3 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    /* ── STATS BAND ── */
+    .stats {
+      background: var(--green);
+      padding: 60px 48px;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+      color: white;
+    }
+
+    .stat-number {
+      font-family: 'Fredoka One', cursive;
+      font-size: 3.5rem;
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* ── MARC'S MORNING ── */
+    .morning {
+      padding: 100px 48px;
+      background: #FFF8EE;
+      overflow: hidden;
+    }
+
+    .morning-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .morning-text h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--dark);
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .morning-text h2 span { color: var(--orange); }
+
+    .morning-text p {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .tl-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      position: relative;
+      padding-bottom: 28px;
+    }
+
+    .tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 48px;
+      width: 3px;
+      height: calc(100% - 20px);
+      background: #e0e0e0;
+    }
+
+    .tl-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tl-body h4 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .tl-body p {
+      font-size: 0.9rem;
+      color: #777;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .morning-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ── PARENTS SECTION ── */
+    .parents {
+      padding: 100px 48px;
+      background: white;
+      text-align: center;
+    }
+
+    .parents h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .parents > p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 560px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+
+    .nutrition-grid {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nutrition-pill {
+      background: #F5F5F5;
+      border-radius: 16px;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 200px;
+      text-align: left;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .nutrition-pill:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+    }
+
+    .nutrition-pill .np-icon {
+      font-size: 2rem;
+    }
+
+    .nutrition-pill .np-text strong {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--dark);
+    }
+
+    .nutrition-pill .np-text span {
+      font-size: 0.82rem;
+      color: #888;
+    }
+
+    /* ── GAME CTA ── */
+    .game-cta {
+      background: linear-gradient(135deg, #2D1B69 0%, #11998e 100%);
+      padding: 100px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-cta::before {
+      content: '🎮';
+      position: absolute;
+      font-size: 30vw;
+      opacity: 0.05;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+    }
+
+    .game-cta h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: white;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .game-cta h2 span { color: var(--yellow); }
+
+    .game-cta p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin: 0 auto 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .game-cta .btn-primary {
+      position: relative;
+      z-index: 1;
+      background: var(--yellow);
+      color: var(--dark);
+      box-shadow: 0 6px 0 #b8960a;
+    }
+
+    .game-cta .btn-primary:hover {
+      box-shadow: 0 9px 0 #b8960a;
+    }
+
+    .qr-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: gap;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.6rem;
+      color: white;
+    }
+
+    .footer-logo span { color: var(--green); }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: white; }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.8rem;
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Apple<span>Jacks</span></div>
+  <ul>
+    <li><a href="#mystery">The Mystery</a></li>
+    <li><a href="#morning">Marc's Morning</a></li>
+    <li><a href="#parents">For Parents</a></li>
+    <li><a href="#game" class="nav-cta">Play Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bubbles" id="bubbles"></div>
+
+  <!-- Decorative rings -->
+  <div class="ring" style="width:80px;height:80px;border-color:#5BBD2F;top:15%;left:8%;animation-duration:8s;"></div>
+  <div class="ring" style="width:55px;height:55px;border-color:#FFD700;top:70%;left:5%;animation-duration:6s;"></div>
+  <div class="ring" style="width:100px;height:100px;border-color:white;top:20%;right:10%;animation-duration:10s;opacity:0.3;"></div>
+  <div class="ring" style="width:65px;height:65px;border-color:#5BBD2F;bottom:20%;right:8%;animation-duration:7s;"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">New Look. Same Mystery.</div>
+    <h1>
+      Taste the
+      <em>Mystery.</em>
+    </h1>
+    <p>They don't taste like apples. They don't taste like cinnamon. They just taste like Apple Jacks — and that's exactly the point.</p>
+    <div class="hero-btns">
+      <a href="#game" class="btn-primary">Play the AJ Game</a>
+      <a href="#mystery" class="btn-secondary">Solve the Mystery</a>
+    </div>
+  </div>
+</section>
+
+<!-- MYSTERY -->
+<section class="mystery" id="mystery">
+  <div class="fade-up">
+    <span class="section-label">The Big Question</span>
+    <h2>Why don't they taste like <span>apples?</span></h2>
+    <p>Nobody knows. Scientists have studied it. Kids have debated it. Moms have Googled it. The mystery lives on — and so does the crunch.</p>
+    <blockquote class="mystery-quote">
+      "I don't even like apples OR cinnamon but Apple Jacks just hits different."
+      <cite>— Marc, age 9, Phoenix AZ</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="features-header fade-up">
+    <span class="section-label">Why Kids Love It</span>
+    <h2>Built for the <span>20-Minute Morning</span></h2>
+  </div>
+  <div class="cards">
+    <div class="card fade-up">
+      <span class="card-icon">🟠🟢</span>
+      <h3>Iconic Rings</h3>
+      <p>Orange and green rings that look as good as they taste. Instantly recognizable from across the cereal aisle.</p>
+    </div>
+    <div class="card fade-up">
+      <span class="card-icon">⏱️</span>
+      <h3>Stays Crunchy</h3>
+      <p>Engineered to hold up for 4+ minutes in cold milk. Because nobody likes soggy cereal before the school bus arrives.</p>
+    </div>
+    <div class="card fade-up">
+      <span class="card-icon">🌾</span>
+      <h3>Whole Grain First</h3>
+      <p>Whole grain is the #1 ingredient. A win kids don't know about and parents definitely appreciate.</p>
+    </div>
+    <div class="card fade-up">
+      <span class="card-icon">⚡</span>
+      <h3>10 Vitamins</h3>
+      <p>Packed with 10 essential vitamins and minerals to fuel whatever the morning throws at you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat fade-up">
+    <span class="stat-number">4+</span>
+    <span class="stat-label">Minutes of Crunch</span>
+  </div>
+  <div class="stat fade-up">
+    <span class="stat-number">10</span>
+    <span class="stat-label">Vitamins & Minerals</span>
+  </div>
+  <div class="stat fade-up">
+    <span class="stat-number">60</span>
+    <span class="stat-label">Years of Mystery</span>
+  </div>
+  <div class="stat fade-up">
+    <span class="stat-number">∞</span>
+    <span class="stat-label">Unanswered Questions</span>
+  </div>
+</div>
+
+<!-- MARC'S MORNING -->
+<section class="morning" id="morning">
+  <div class="morning-inner">
+    <div class="morning-text fade-up">
+      <span class="section-label">A Day in the Life</span>
+      <h2>Marc's <span>Perfect Morning</span></h2>
+      <p>Apple Jacks fits into real life — fast, familiar, and no arguments at 7:15 AM.</p>
+    </div>
+
+    <div class="timeline fade-up">
+      <div class="tl-item">
+        <div class="tl-icon">⏰</div>
+        <div class="tl-body">
+          <h4>7:05 AM — Alarm goes off</h4>
+          <p>Marc has exactly 20 minutes before the bus. No time for anything complicated.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🥣</div>
+        <div class="tl-body">
+          <h4>7:07 AM — Bowl is poured</h4>
+          <p>Self-serve breakfast. No parental intervention required. Confidence unlocked.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🤔</div>
+        <div class="tl-body">
+          <h4>7:10 AM — The debate begins</h4>
+          <p>Marc wonders, again, why Apple Jacks doesn't taste like apples. This will not be solved today.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🎮</div>
+        <div class="tl-body">
+          <h4>7:14 AM — Scans the box</h4>
+          <p>Spots the QR code. Makes a mental note to play the Roblox game after school.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🚌</div>
+        <div class="tl-body">
+          <h4>7:21 AM — On the bus</h4>
+          <p>Full. Ready. The mystery unresolved, the morning won.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARENTS -->
+<section class="parents" id="parents">
+  <div class="fade-up">
+    <span class="section-label">For the Sandra in Your Life</span>
+    <h2>Parents, we've got you covered.</h2>
+    <p>We know you're reading the label. Here's what actually matters — and why Apple Jacks earns a place in your cart.</p>
+  </div>
+  <div class="nutrition-grid fade-up">
+    <div class="nutrition-pill">
+      <span class="np-icon">🌾</span>
+      <div class="np-text">
+        <strong>Whole Grain #1</strong>
+        <span>First ingredient, every time</span>
+      </div>
+    </div>
+    <div class="nutrition-pill">
+      <span class="np-icon">💊</span>
+      <div class="np-text">
+        <strong>10 Vitamins</strong>
+        <span>Essential nutrients per serving</span>
+      </div>
+    </div>
+    <div class="nutrition-pill">
+      <span class="np-icon">⬇️</span>
+      <div class="np-text">
+        <strong>Less Sugar</strong>
+        <span>10% reduced vs. prior recipe</span>
+      </div>
+    </div>
+    <div class="nutrition-pill">
+      <span class="np-icon">🥛</span>
+      <div class="np-text">
+        <strong>Low Fat</strong>
+        <span>0.5g fat per serving</span>
+      </div>
+    </div>
+    <div class="nutrition-pill">
+      <span class="np-icon">✅</span>
+      <div class="np-text">
+        <strong>No Artificial Colors</strong>
+        <span>Real ingredients, real taste</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAME CTA -->
+<section class="game-cta" id="game">
+  <div class="fade-up">
+    <h2>Scan the Box.<br><span>Enter the Mystery.</span></h2>
+    <p>Every Apple Jacks box has a QR code that unlocks an exclusive in-game item in Roblox. Find the code. Solve the mystery. Get the loot.</p>
+    <a href="#" class="btn-primary">Play on Roblox</a>
+    <div class="qr-note">
+      <span>📦</span>
+      <span>QR code found on every box at participating retailers</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Apple<span>Jacks</span></div>
+  <div class="footer-links">
+    <a href="#">Nutrition Info</a>
+    <a href="#">Find a Store</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Kids & Advertising</a>
+  </div>
+  <div class="footer-copy">© 2026 Kellogg's. Apple Jacks is a registered trademark.</div>
+</footer>
+
+<script>
+  // Floating bubble background
+  const bubbleContainer = document.getElementById('bubbles');
+  const colors = ['#5BBD2F', '#FFD700', 'white', '#E8272A'];
+  for (let i = 0; i < 20; i++) {
+    const b = document.createElement('div');
+    b.className = 'bubble';
+    const size = Math.random() * 80 + 20;
+    b.style.cssText = `
+      width: ${size}px;
+      height: ${size}px;
+      background: ${colors[Math.floor(Math.random() * colors.length)]};
+      left: ${Math.random() * 100}%;
+      animation-duration: ${Math.random() * 12 + 8}s;
+      animation-delay: ${Math.random() * -15}s;
+    `;
+    bubbleContainer.appendChild(b);
+  }
+
+  // Scroll-triggered fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
