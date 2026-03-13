@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apple Jacks — Taste the Mystery</title>
+  <title>Apple Jacks — Still Hits Different</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap');
 
@@ -112,7 +112,7 @@
     .hero-content {
       text-align: center;
       z-index: 2;
-      max-width: 780px;
+      max-width: 820px;
     }
 
     .hero-badge {
@@ -146,7 +146,7 @@
     .hero p {
       font-size: clamp(1rem, 2.5vw, 1.35rem);
       color: rgba(255,255,255,0.92);
-      max-width: 540px;
+      max-width: 580px;
       margin: 0 auto 36px;
       font-weight: 700;
       line-height: 1.6;
@@ -200,7 +200,6 @@
       box-shadow: 0 9px 0 rgba(0,0,0,0.15);
     }
 
-    /* Floating rings */
     .ring {
       position: absolute;
       border-radius: 50%;
@@ -214,8 +213,8 @@
       to   { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
     }
 
-    /* ── MYSTERY SECTION ── */
-    .mystery {
+    /* ── VALIDATION SECTION ── */
+    .validation {
       background: var(--dark);
       padding: 100px 48px;
       text-align: center;
@@ -223,8 +222,8 @@
       overflow: hidden;
     }
 
-    .mystery::before {
-      content: '?';
+    .validation::before {
+      content: '30';
       position: absolute;
       font-family: 'Fredoka One', cursive;
       font-size: 40vw;
@@ -246,24 +245,24 @@
       display: block;
     }
 
-    .mystery h2 {
+    .validation h2 {
       font-family: 'Fredoka One', cursive;
       font-size: clamp(2rem, 5vw, 4rem);
       color: white;
       margin-bottom: 20px;
     }
 
-    .mystery h2 span { color: var(--orange); }
+    .validation h2 span { color: var(--orange); }
 
-    .mystery p {
+    .validation p {
       color: rgba(255,255,255,0.7);
       font-size: 1.15rem;
-      max-width: 600px;
+      max-width: 640px;
       margin: 0 auto 60px;
       line-height: 1.7;
     }
 
-    .mystery-quote {
+    .validation-quote {
       display: inline-block;
       background: rgba(255,255,255,0.06);
       border-left: 6px solid var(--orange);
@@ -272,13 +271,13 @@
       font-family: 'Fredoka One', cursive;
       font-size: clamp(1.2rem, 3vw, 1.8rem);
       color: white;
-      max-width: 700px;
+      max-width: 720px;
       line-height: 1.4;
       position: relative;
       z-index: 1;
     }
 
-    .mystery-quote cite {
+    .validation-quote cite {
       display: block;
       font-family: 'Nunito', sans-serif;
       font-size: 0.9rem;
@@ -288,24 +287,32 @@
       font-weight: 700;
     }
 
-    /* ── FEATURES ── */
-    .features {
+    /* ── USE CASES ── */
+    .usecases {
       padding: 100px 48px;
       background: var(--light);
     }
 
-    .features-header {
+    .usecases-header {
       text-align: center;
       margin-bottom: 64px;
     }
 
-    .features-header h2 {
+    .usecases-header h2 {
       font-family: 'Fredoka One', cursive;
       font-size: clamp(2rem, 4vw, 3.5rem);
       color: var(--dark);
     }
 
-    .features-header h2 span { color: var(--orange); }
+    .usecases-header h2 span { color: var(--orange); }
+
+    .usecases-header p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 520px;
+      margin: 12px auto 0;
+      line-height: 1.7;
+    }
 
     .cards {
       display: grid;
@@ -381,7 +388,7 @@
       display: block;
     }
 
-    /* ── MARC'S MORNING ── */
+    /* ── MORNING SECTION ── */
     .morning {
       padding: 100px 48px;
       background: #FFF8EE;
@@ -469,82 +476,83 @@
       .morning-inner { grid-template-columns: 1fr; }
     }
 
-    /* ── PARENTS SECTION ── */
-    .parents {
+    /* ── SKEPTIC SECTION ── */
+    .skeptic {
       padding: 100px 48px;
       background: white;
       text-align: center;
     }
 
-    .parents h2 {
+    .skeptic h2 {
       font-family: 'Fredoka One', cursive;
       font-size: clamp(2rem, 4vw, 3.2rem);
       color: var(--dark);
       margin-bottom: 12px;
     }
 
-    .parents > p {
+    .skeptic h2 span { color: var(--orange); }
+
+    .skeptic > p {
       color: #666;
       font-size: 1.1rem;
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto 56px;
       line-height: 1.7;
     }
 
-    .nutrition-grid {
+    .objections {
       display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      max-width: 900px;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 720px;
       margin: 0 auto;
-    }
-
-    .nutrition-pill {
-      background: #F5F5F5;
-      border-radius: 16px;
-      padding: 20px 28px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 200px;
       text-align: left;
-      border: 2px solid transparent;
-      transition: border-color 0.2s, transform 0.2s;
     }
 
-    .nutrition-pill:hover {
-      border-color: var(--green);
-      transform: translateY(-3px);
+    .objection-card {
+      background: #F9F9F9;
+      border-radius: 16px;
+      padding: 28px 32px;
+      border-left: 6px solid var(--orange);
+      transition: transform 0.2s;
     }
 
-    .nutrition-pill .np-icon {
-      font-size: 2rem;
-    }
+    .objection-card:hover { transform: translateX(6px); }
 
-    .nutrition-pill .np-text strong {
-      display: block;
-      font-size: 1.1rem;
+    .objection-card .objection {
+      font-size: 0.8rem;
       font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 6px;
+    }
+
+    .objection-card h4 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.25rem;
       color: var(--dark);
+      margin-bottom: 8px;
     }
 
-    .nutrition-pill .np-text span {
-      font-size: 0.82rem;
-      color: #888;
+    .objection-card p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.65;
+      margin: 0;
     }
 
-    /* ── GAME CTA ── */
-    .game-cta {
-      background: linear-gradient(135deg, #2D1B69 0%, #11998e 100%);
+    /* ── STOCK UP CTA ── */
+    .stockup {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2d2d2d 100%);
       padding: 100px 48px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    .game-cta::before {
-      content: '🎮';
+    .stockup::before {
+      content: '🥣';
       position: absolute;
       font-size: 30vw;
       opacity: 0.05;
@@ -554,7 +562,7 @@
       line-height: 1;
     }
 
-    .game-cta h2 {
+    .stockup h2 {
       font-family: 'Fredoka One', cursive;
       font-size: clamp(2rem, 5vw, 4rem);
       color: white;
@@ -563,35 +571,36 @@
       z-index: 1;
     }
 
-    .game-cta h2 span { color: var(--yellow); }
+    .stockup h2 span { color: var(--yellow); }
 
-    .game-cta p {
-      color: rgba(255,255,255,0.8);
+    .stockup p {
+      color: rgba(255,255,255,0.75);
       font-size: 1.15rem;
-      max-width: 540px;
+      max-width: 560px;
       margin: 0 auto 36px;
       position: relative;
       z-index: 1;
+      line-height: 1.7;
     }
 
-    .game-cta .btn-primary {
+    .stockup .btn-primary {
       position: relative;
       z-index: 1;
-      background: var(--yellow);
-      color: var(--dark);
-      box-shadow: 0 6px 0 #b8960a;
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 6px 0 #b85a10;
     }
 
-    .game-cta .btn-primary:hover {
-      box-shadow: 0 9px 0 #b8960a;
+    .stockup .btn-primary:hover {
+      box-shadow: 0 9px 0 #b85a10;
     }
 
-    .qr-note {
+    .stockup-note {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin-top: 24px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.45);
       font-size: 0.9rem;
       position: relative;
       z-index: 1;
@@ -604,7 +613,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: gap;
+      flex-wrap: wrap;
       gap: 24px;
     }
 
@@ -637,6 +646,291 @@
       font-size: 0.8rem;
     }
 
+    /* ── ROI CALCULATOR ── */
+    .roi-calc {
+      padding: 100px 48px;
+      background: #0f1923;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .roi-calc-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .roi-calc-header h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .roi-calc-header h2 span { color: var(--orange); }
+
+    .roi-calc-header p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.1rem;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .calc-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .calc-layout { grid-template-columns: 1fr; }
+    }
+
+    .calc-inputs {
+      background: rgba(255,255,255,0.05);
+      border-radius: 24px;
+      padding: 40px 36px;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .calc-field label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-weight: 900;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .calc-field label .field-value {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.2rem;
+      color: var(--orange);
+      background: rgba(244,123,32,0.15);
+      padding: 2px 12px;
+      border-radius: 999px;
+    }
+
+    .calc-field input[type="range"] {
+      width: 100%;
+      -webkit-appearance: none;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .calc-field input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 2px 8px rgba(244,123,32,0.5);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+
+    .calc-field input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .calc-field select {
+      width: 100%;
+      padding: 12px 40px 12px 16px;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23F47B20' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .calc-field select:focus { border-color: var(--orange); }
+    .calc-field select option { background: #1a2530; color: white; }
+
+    .size-toggle {
+      display: flex;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .size-toggle button {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .size-toggle button.active {
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 2px 8px rgba(244,123,32,0.4);
+    }
+
+    .calc-results {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .result-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 24px 28px;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+
+    .result-card:hover { transform: translateX(4px); }
+    .result-card.highlight { border-color: var(--orange); background: rgba(244,123,32,0.08); }
+
+    .result-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      border-radius: 14px;
+    }
+
+    .result-body { flex: 1; }
+
+    .result-label {
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+
+    .result-value {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.6rem;
+      color: white;
+      line-height: 1.1;
+    }
+
+    .result-value.positive { color: var(--green); }
+    .result-value.negative { color: #ff6b6b; }
+
+    .result-sub {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 3px;
+    }
+
+    .nutrition-factors {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .factor-pip {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      transition: background 0.3s;
+    }
+
+    .factor-pip.win  { background: var(--green); }
+    .factor-pip.lose { background: #ff6b6b; }
+    .factor-pip.tie  { background: var(--yellow); }
+
+    .total-roi {
+      background: linear-gradient(135deg, var(--orange), #ff9a3c);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .total-roi .total-label {
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 6px;
+    }
+
+    .total-roi .total-value {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.8rem;
+      color: white;
+      line-height: 1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .total-roi .total-sub {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+    }
+
+    .share-btn {
+      width: 100%;
+      padding: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .share-btn:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+
+    .share-btn.copied {
+      background: rgba(91,189,47,0.2);
+      border-color: var(--green);
+      color: var(--green);
+    }
+
     /* ── SCROLL ANIMATIONS ── */
     .fade-up {
       opacity: 0;
@@ -656,10 +950,11 @@
 <nav>
   <div class="nav-logo">Apple<span>Jacks</span></div>
   <ul>
-    <li><a href="#mystery">The Mystery</a></li>
-    <li><a href="#morning">Marc's Morning</a></li>
-    <li><a href="#parents">For Parents</a></li>
-    <li><a href="#game" class="nav-cta">Play Now</a></li>
+    <li><a href="#usecases">When to Eat It</a></li>
+    <li><a href="#morning">Your Morning</a></li>
+    <li><a href="#skeptic">Real Talk</a></li>
+    <li><a href="#roi">ROI Calculator</a></li>
+    <li><a href="#stockup" class="nav-cta">Stock Up</a></li>
   </ul>
 </nav>
 
@@ -667,65 +962,65 @@
 <section class="hero">
   <div class="hero-bubbles" id="bubbles"></div>
 
-  <!-- Decorative rings -->
   <div class="ring" style="width:80px;height:80px;border-color:#5BBD2F;top:15%;left:8%;animation-duration:8s;"></div>
   <div class="ring" style="width:55px;height:55px;border-color:#FFD700;top:70%;left:5%;animation-duration:6s;"></div>
   <div class="ring" style="width:100px;height:100px;border-color:white;top:20%;right:10%;animation-duration:10s;opacity:0.3;"></div>
   <div class="ring" style="width:65px;height:65px;border-color:#5BBD2F;bottom:20%;right:8%;animation-duration:7s;"></div>
 
   <div class="hero-content">
-    <div class="hero-badge">New Look. Same Mystery.</div>
+    <div class="hero-badge">You're 30. This Still Slaps.</div>
     <h1>
-      Taste the
-      <em>Mystery.</em>
+      You Never
+      <em>Stopped.</em>
     </h1>
-    <p>They don't taste like apples. They don't taste like cinnamon. They just taste like Apple Jacks — and that's exactly the point.</p>
+    <p>You've got a mortgage, a full-time job, and opinions about coffee — and you still pour a bowl of Apple Jacks. That's not a phase. That's taste.</p>
     <div class="hero-btns">
-      <a href="#game" class="btn-primary">Play the AJ Game</a>
-      <a href="#mystery" class="btn-secondary">Solve the Mystery</a>
+      <a href="#stockup" class="btn-primary">Stock the Pantry</a>
+      <a href="#usecases" class="btn-secondary">See When It Hits</a>
     </div>
   </div>
 </section>
 
-<!-- MYSTERY -->
-<section class="mystery" id="mystery">
+<!-- VALIDATION -->
+<section class="validation" id="validation">
   <div class="fade-up">
-    <span class="section-label">The Big Question</span>
-    <h2>Why don't they taste like <span>apples?</span></h2>
-    <p>Nobody knows. Scientists have studied it. Kids have debated it. Moms have Googled it. The mystery lives on — and so does the crunch.</p>
-    <blockquote class="mystery-quote">
-      "I don't even like apples OR cinnamon but Apple Jacks just hits different."
-      <cite>— Marc, age 9, Phoenix AZ</cite>
+    <span class="section-label">No Judgment Zone</span>
+    <h2>It doesn't taste like apples.<br>It doesn't taste like <span>cinnamon.</span></h2>
+    <p>You've been trying to explain it at brunch for 20 years. You can't. Nobody can. That's fine. Some things don't need to be explained — they just need to be in your cabinet at all times.</p>
+    <blockquote class="validation-quote">
+      "I'm a functioning adult. I pay taxes. I eat Apple Jacks for dinner sometimes. These things are not contradictions."
+      <cite>— Alex, 30, probably you</cite>
     </blockquote>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features">
-  <div class="features-header fade-up">
-    <span class="section-label">Why Kids Love It</span>
-    <h2>Built for the <span>20-Minute Morning</span></h2>
+<!-- USE CASES -->
+<section class="usecases" id="usecases">
+  <div class="usecases-header fade-up">
+    <span class="section-label">Adult Life, Certified Situations</span>
+    <h2>Every time <span>Apple Jacks</span> makes sense</h2>
+    <p>Turns out there are more situations than you thought.</p>
   </div>
   <div class="cards">
     <div class="card fade-up">
-      <span class="card-icon">🟠🟢</span>
-      <h3>Iconic Rings</h3>
-      <p>Orange and green rings that look as good as they taste. Instantly recognizable from across the cereal aisle.</p>
+      <span class="card-icon">☕</span>
+      <h3>The 7 AM Sprint</h3>
+      <p>Standup in 90 minutes. No time to cook. No desire to think. Pour milk, eat cereal, be a person.</p>
     </div>
     <div class="card fade-up">
-      <span class="card-icon">⏱️</span>
-      <h3>Stays Crunchy</h3>
-      <p>Engineered to hold up for 4+ minutes in cold milk. Because nobody likes soggy cereal before the school bus arrives.</p>
+      <span class="card-icon">🌙</span>
+      <h3>Midnight Reset</h3>
+      <p>Long day. Long week. You just want something that tastes like being 10 years old and having zero problems.</p>
     </div>
     <div class="card fade-up">
-      <span class="card-icon">🌾</span>
-      <h3>Whole Grain First</h3>
-      <p>Whole grain is the #1 ingredient. A win kids don't know about and parents definitely appreciate.</p>
+      <span class="card-icon">💻</span>
+      <h3>The WFH Lunch Trap</h3>
+      <p>It's 1 PM. You're four Zoom calls deep and can't make a decision. Apple Jacks requires no decisions.</p>
     </div>
     <div class="card fade-up">
-      <span class="card-icon">⚡</span>
-      <h3>10 Vitamins</h3>
-      <p>Packed with 10 essential vitamins and minerals to fuel whatever the morning throws at you.</p>
+      <span class="card-icon">🛋️</span>
+      <h3>Sunday with No Plans</h3>
+      <p>The only morning all week that belongs to you. Cereal on the couch, no pants required, no guilt included.</p>
     </div>
   </div>
 </section>
@@ -733,127 +1028,213 @@
 <!-- STATS -->
 <div class="stats">
   <div class="stat fade-up">
+    <span class="stat-number">~20</span>
+    <span class="stat-label">Years You've Been Eating This</span>
+  </div>
+  <div class="stat fade-up">
     <span class="stat-number">4+</span>
-    <span class="stat-label">Minutes of Crunch</span>
+    <span class="stat-label">Minutes of Crunch in Milk</span>
   </div>
   <div class="stat fade-up">
     <span class="stat-number">10</span>
     <span class="stat-label">Vitamins & Minerals</span>
   </div>
   <div class="stat fade-up">
-    <span class="stat-number">60</span>
-    <span class="stat-label">Years of Mystery</span>
-  </div>
-  <div class="stat fade-up">
-    <span class="stat-number">∞</span>
-    <span class="stat-label">Unanswered Questions</span>
+    <span class="stat-number">0</span>
+    <span class="stat-label">Reasons to Stop</span>
   </div>
 </div>
 
-<!-- MARC'S MORNING -->
+<!-- YOUR MORNING -->
 <section class="morning" id="morning">
   <div class="morning-inner">
     <div class="morning-text fade-up">
       <span class="section-label">A Day in the Life</span>
-      <h2>Marc's <span>Perfect Morning</span></h2>
-      <p>Apple Jacks fits into real life — fast, familiar, and no arguments at 7:15 AM.</p>
+      <h2>Your <span>Actual Morning</span></h2>
+      <p>Not the aspirational one with smoothies and a 5-mile run. The real one — where Apple Jacks is the move that makes everything else work.</p>
     </div>
 
     <div class="timeline fade-up">
       <div class="tl-item">
         <div class="tl-icon">⏰</div>
         <div class="tl-body">
-          <h4>7:05 AM — Alarm goes off</h4>
-          <p>Marc has exactly 20 minutes before the bus. No time for anything complicated.</p>
+          <h4>7:02 AM — Third alarm</h4>
+          <p>You're up. Barely. There is no version of this morning that involves cooking eggs.</p>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-icon">🥣</div>
         <div class="tl-body">
-          <h4>7:07 AM — Bowl is poured</h4>
-          <p>Self-serve breakfast. No parental intervention required. Confidence unlocked.</p>
+          <h4>7:06 AM — Bowl poured in under 90 seconds</h4>
+          <p>No pan. No cleanup. No thinking. This is efficiency. You've optimized mornings without even trying.</p>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-icon">🤔</div>
         <div class="tl-body">
-          <h4>7:10 AM — The debate begins</h4>
-          <p>Marc wonders, again, why Apple Jacks doesn't taste like apples. This will not be solved today.</p>
+          <h4>7:09 AM — The flavor thing, again</h4>
+          <p>It still doesn't taste like apples. You've accepted this. It somehow makes it better.</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-icon">🎮</div>
+        <div class="tl-icon">💼</div>
         <div class="tl-body">
-          <h4>7:14 AM — Scans the box</h4>
-          <p>Spots the QR code. Makes a mental note to play the Roblox game after school.</p>
+          <h4>7:18 AM — Out the door</h4>
+          <p>Fed. Awake. Ready. You didn't have to think once. That's the whole point.</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-icon">🚌</div>
+        <div class="tl-icon">✅</div>
         <div class="tl-body">
-          <h4>7:21 AM — On the bus</h4>
-          <p>Full. Ready. The mystery unresolved, the morning won.</p>
+          <h4>7:19 AM — Already thinking about tomorrow's bowl</h4>
+          <p>Mental note: check if you're running low. Cannot run out. Will not run out.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PARENTS -->
-<section class="parents" id="parents">
+<!-- REAL TALK / SKEPTIC -->
+<section class="skeptic" id="skeptic">
   <div class="fade-up">
-    <span class="section-label">For the Sandra in Your Life</span>
-    <h2>Parents, we've got you covered.</h2>
-    <p>We know you're reading the label. Here's what actually matters — and why Apple Jacks earns a place in your cart.</p>
+    <span class="section-label">We Know What You're Thinking</span>
+    <h2>Let's be <span>honest</span> about it.</h2>
+    <p>You've had these thoughts. We've got answers. No spin, no wellness buzzwords — just straight talk from a cereal that's been around longer than your current job.</p>
   </div>
-  <div class="nutrition-grid fade-up">
-    <div class="nutrition-pill">
-      <span class="np-icon">🌾</span>
-      <div class="np-text">
-        <strong>Whole Grain #1</strong>
-        <span>First ingredient, every time</span>
-      </div>
+  <div class="objections fade-up">
+    <div class="objection-card">
+      <div class="objection">You're thinking...</div>
+      <h4>"Isn't this just a kids' cereal?"</h4>
+      <p>Sure, kids eat it. Adults also eat pizza, mac and cheese, and chicken nuggets. Taste doesn't have an age limit. You're not eating a crayon. You're eating breakfast.</p>
     </div>
-    <div class="nutrition-pill">
-      <span class="np-icon">💊</span>
-      <div class="np-text">
-        <strong>10 Vitamins</strong>
-        <span>Essential nutrients per serving</span>
-      </div>
+    <div class="objection-card">
+      <div class="objection">You're thinking...</div>
+      <h4>"It's probably too sweet for me now."</h4>
+      <p>Apple Jacks has a flavor complexity that most cereals don't — that cinnamon-apple thing that isn't quite either. It's not candy. It's the right amount. You've always known this.</p>
     </div>
-    <div class="nutrition-pill">
-      <span class="np-icon">⬇️</span>
-      <div class="np-text">
-        <strong>Less Sugar</strong>
-        <span>10% reduced vs. prior recipe</span>
-      </div>
+    <div class="objection-card">
+      <div class="objection">You're thinking...</div>
+      <h4>"I should be eating something healthier."</h4>
+      <p>Whole grain is the #1 ingredient. 10 vitamins and minerals per bowl. Less sugar than you assume. Pair it with milk and you've covered more nutritional bases than that granola bar you grabbed last Tuesday.</p>
     </div>
-    <div class="nutrition-pill">
-      <span class="np-icon">🥛</span>
-      <div class="np-text">
-        <strong>Low Fat</strong>
-        <span>0.5g fat per serving</span>
-      </div>
-    </div>
-    <div class="nutrition-pill">
-      <span class="np-icon">✅</span>
-      <div class="np-text">
-        <strong>No Artificial Colors</strong>
-        <span>Real ingredients, real taste</span>
-      </div>
+    <div class="objection-card">
+      <div class="objection">You're thinking...</div>
+      <h4>"What if I run out and forget to buy more?"</h4>
+      <p>That is the only real risk here. Buy the family-size box. Buy two. This is why bulk exists.</p>
     </div>
   </div>
 </section>
 
-<!-- GAME CTA -->
-<section class="game-cta" id="game">
+<!-- ROI CALCULATOR -->
+<section class="roi-calc" id="roi">
+  <div class="roi-calc-header fade-up">
+    <span class="section-label">Do the Math</span>
+    <h2>Your Apple Jacks <span>ROI</span></h2>
+    <p>Put a number on the decision you've already made. See exactly what Apple Jacks saves you in time, money, and nutrition vs. whatever else you'd be eating.</p>
+  </div>
+
+  <div class="calc-layout fade-up">
+
+    <!-- INPUTS -->
+    <div class="calc-inputs">
+      <div class="calc-field">
+        <label>
+          Bowls per week
+          <span class="field-value" id="bowls-display">7 bowls</span>
+        </label>
+        <input type="range" id="bowls-slider" min="1" max="14" value="7" />
+      </div>
+
+      <div class="calc-field">
+        <label>What would you eat instead?</label>
+        <select id="cereal-select">
+          <option value="cheerios">Cheerios</option>
+          <option value="special-k">Special K</option>
+          <option value="granola">Granola</option>
+          <option value="raisin-bran">Raisin Bran</option>
+          <option value="mini-wheats">Frosted Mini-Wheats</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label>Box size you buy</label>
+        <div class="size-toggle">
+          <button id="size-regular" onclick="setSize('regular')">Regular</button>
+          <button id="size-family" class="active" onclick="setSize('family')">Family Size</button>
+        </div>
+      </div>
+
+      <div class="calc-field">
+        <label>
+          Your hourly rate
+          <span class="field-value" id="rate-display">$30/hr</span>
+        </label>
+        <input type="range" id="rate-slider" min="10" max="100" step="5" value="30" />
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="calc-results">
+      <div class="result-card">
+        <div class="result-icon">⏱️</div>
+        <div class="result-body">
+          <div class="result-label">Time Saved Per Year</div>
+          <div class="result-value positive" id="result-time">—</div>
+          <div class="result-sub" id="result-time-sub"></div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-icon">💰</div>
+        <div class="result-body">
+          <div class="result-label">Money Saved Per Year</div>
+          <div class="result-value" id="result-money">—</div>
+          <div class="result-sub" id="result-money-sub"></div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-icon">🌾</div>
+        <div class="result-body">
+          <div class="result-label">Nutrition Score vs. Rival</div>
+          <div class="result-value" id="result-nutrition">—</div>
+          <div class="nutrition-factors" id="nutrition-pips"></div>
+          <div class="result-sub" id="result-nutrition-sub"></div>
+        </div>
+      </div>
+
+      <div class="result-card highlight">
+        <div class="result-icon">😄</div>
+        <div class="result-body">
+          <div class="result-label">Happiness Factor</div>
+          <div class="result-value positive">Immeasurable</div>
+          <div class="result-sub">Science can't explain it. You don't need it to.</div>
+        </div>
+      </div>
+
+      <div class="total-roi">
+        <div class="total-label">Total Annual ROI vs. <span id="total-vs-name">Cheerios</span></div>
+        <div class="total-value" id="result-total">—</div>
+        <div class="total-sub">time value + cost savings combined</div>
+      </div>
+
+      <button class="share-btn" id="share-btn" onclick="shareResult()">
+        <span>📋</span> Copy My Results
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- STOCK UP CTA -->
+<section class="stockup" id="stockup">
   <div class="fade-up">
-    <h2>Scan the Box.<br><span>Enter the Mystery.</span></h2>
-    <p>Every Apple Jacks box has a QR code that unlocks an exclusive in-game item in Roblox. Find the code. Solve the mystery. Get the loot.</p>
-    <a href="#" class="btn-primary">Play on Roblox</a>
-    <div class="qr-note">
+    <h2>Never Run Out<br><span>Again.</span></h2>
+    <p>The worst version of your morning is opening the cabinet and finding an empty box. That's an avoidable tragedy. Stock up. Buy big. You will eat it.</p>
+    <a href="#" class="btn-primary">Find a Store Near You</a>
+    <div class="stockup-note">
       <span>📦</span>
-      <span>QR code found on every box at participating retailers</span>
+      <span>Family-size boxes available at most major grocery retailers</span>
     </div>
   </div>
 </section>
@@ -865,7 +1246,7 @@
     <a href="#">Nutrition Info</a>
     <a href="#">Find a Store</a>
     <a href="#">Privacy Policy</a>
-    <a href="#">Kids & Advertising</a>
+    <a href="#">Contact</a>
   </div>
   <div class="footer-copy">© 2026 Kellogg's. Apple Jacks is a registered trademark.</div>
 </footer>
@@ -899,6 +1280,139 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── ROI CALCULATOR ──
+  const cerealData = {
+    'cheerios':     { name: 'Cheerios',            costRegular: 0.42, costFamily: 0.38, prepSecs: 120, wholeGrain: true,  vitamins: 12, sugarG: 1,  fiberG: 3 },
+    'special-k':    { name: 'Special K',            costRegular: 0.52, costFamily: 0.45, prepSecs: 130, wholeGrain: false, vitamins: 11, sugarG: 4,  fiberG: 1 },
+    'granola':      { name: 'Granola',              costRegular: 0.85, costFamily: 0.72, prepSecs: 160, wholeGrain: true,  vitamins: 3,  sugarG: 12, fiberG: 4 },
+    'raisin-bran':  { name: 'Raisin Bran',          costRegular: 0.46, costFamily: 0.40, prepSecs: 110, wholeGrain: true,  vitamins: 10, sugarG: 17, fiberG: 7 },
+    'mini-wheats':  { name: 'Frosted Mini-Wheats',  costRegular: 0.42, costFamily: 0.36, prepSecs: 105, wholeGrain: true,  vitamins: 10, sugarG: 12, fiberG: 6 },
+  };
+
+  const aj = { costRegular: 0.32, costFamily: 0.28, prepSecs: 90, wholeGrain: true, vitamins: 10, sugarG: 9, fiberG: 3 };
+
+  let currentSize = 'family';
+
+  function setSize(size) {
+    currentSize = size;
+    document.getElementById('size-regular').classList.toggle('active', size === 'regular');
+    document.getElementById('size-family').classList.toggle('active', size === 'family');
+    calcROI();
+  }
+
+  function calcROI() {
+    const bowls = parseInt(document.getElementById('bowls-slider').value);
+    const rate  = parseInt(document.getElementById('rate-slider').value);
+    const key   = document.getElementById('cereal-select').value;
+    const rival = cerealData[key];
+    const ajCost    = currentSize === 'family' ? aj.costFamily    : aj.costRegular;
+    const rivalCost = currentSize === 'family' ? rival.costFamily : rival.costRegular;
+    const bowlsPerYear = bowls * 52;
+
+    // 1. Time
+    const timeSavedSecs  = (rival.prepSecs - aj.prepSecs) * bowlsPerYear;
+    const timeSavedHours = timeSavedSecs / 3600;
+    const timeValue      = timeSavedHours * rate;
+    const timeEl    = document.getElementById('result-time');
+    const timeSubEl = document.getElementById('result-time-sub');
+    if (timeSavedHours >= 0) {
+      timeEl.textContent    = timeSavedHours < 1
+        ? `${Math.round(timeSavedSecs / 60)} min`
+        : `${timeSavedHours.toFixed(1)} hrs`;
+      timeEl.className      = 'result-value positive';
+      timeSubEl.textContent = `Worth $${Math.round(timeValue)} at your rate`;
+    } else {
+      timeEl.textContent    = `${Math.abs(timeSavedHours).toFixed(1)} hrs slower`;
+      timeEl.className      = 'result-value negative';
+      timeSubEl.textContent = `${rival.name} is quicker to prep`;
+    }
+
+    // 2. Money
+    const moneySaved = (rivalCost - ajCost) * bowlsPerYear;
+    const moneyEl    = document.getElementById('result-money');
+    const moneySubEl = document.getElementById('result-money-sub');
+    if (moneySaved >= 0) {
+      moneyEl.textContent    = `$${Math.round(moneySaved)}`;
+      moneyEl.className      = 'result-value positive';
+      moneySubEl.textContent = `AJ costs $${ajCost.toFixed(2)}/serving vs. $${rivalCost.toFixed(2)} for ${rival.name}`;
+    } else {
+      moneyEl.textContent    = `-$${Math.round(Math.abs(moneySaved))}`;
+      moneyEl.className      = 'result-value negative';
+      moneySubEl.textContent = `${rival.name} is cheaper per serving`;
+    }
+
+    // 3. Nutrition — score 4 factors
+    const factors = [
+      { label: 'Whole Grain', win: aj.wholeGrain && !rival.wholeGrain,  tie: aj.wholeGrain === rival.wholeGrain },
+      { label: 'Vitamins',    win: aj.vitamins > rival.vitamins,         tie: aj.vitamins  === rival.vitamins   },
+      { label: 'Sugar',       win: aj.sugarG   < rival.sugarG,           tie: aj.sugarG    === rival.sugarG     },
+      { label: 'Fiber',       win: aj.fiberG   > rival.fiberG,           tie: aj.fiberG    === rival.fiberG     },
+    ];
+    const wins = factors.filter(f => f.win).length;
+    const nutEl    = document.getElementById('result-nutrition');
+    const nutSubEl = document.getElementById('result-nutrition-sub');
+    const pipsEl   = document.getElementById('nutrition-pips');
+    nutEl.textContent = `${wins}/4 factors`;
+    nutEl.className   = wins >= 2 ? 'result-value positive' : 'result-value negative';
+    nutSubEl.textContent = wins >= 3 ? `Clearly the stronger choice vs. ${rival.name}`
+                         : wins === 2 ? `Holds its own against ${rival.name}`
+                         : `${rival.name} has the nutrition edge here`;
+    pipsEl.innerHTML = factors.map(f => {
+      const cls = f.win ? 'win' : f.tie ? 'tie' : 'lose';
+      return `<div class="factor-pip ${cls}" title="${f.label}: ${f.win ? 'AJ wins' : f.tie ? 'Tie' : rival.name + ' wins'}"></div>`;
+    }).join('');
+
+    // 4. Total ROI
+    const totalROI = timeValue + moneySaved;
+    document.getElementById('result-total').textContent =
+      totalROI >= 0 ? `+$${Math.round(totalROI)}` : `-$${Math.round(Math.abs(totalROI))}`;
+    document.getElementById('total-vs-name').textContent = rival.name;
+  }
+
+  document.getElementById('bowls-slider').addEventListener('input', function () {
+    const v = parseInt(this.value);
+    document.getElementById('bowls-display').textContent = `${v} bowl${v !== 1 ? 's' : ''}`;
+    calcROI();
+  });
+
+  document.getElementById('rate-slider').addEventListener('input', function () {
+    document.getElementById('rate-display').textContent = `$${this.value}/hr`;
+    calcROI();
+  });
+
+  document.getElementById('cereal-select').addEventListener('change', calcROI);
+
+  function shareResult() {
+    const bowls    = document.getElementById('bowls-slider').value;
+    const rival    = cerealData[document.getElementById('cereal-select').value];
+    const timeVal  = document.getElementById('result-time').textContent;
+    const moneyVal = document.getElementById('result-money').textContent;
+    const nutVal   = document.getElementById('result-nutrition').textContent;
+    const total    = document.getElementById('result-total').textContent;
+    const text = [
+      `My Apple Jacks ROI vs. ${rival.name} (${bowls} bowls/week):`,
+      `⏱  Time saved: ${timeVal}`,
+      `💰  Money saved: ${moneyVal}`,
+      `🌾  Nutrition: ${nutVal}`,
+      `😄  Happiness: Immeasurable`,
+      `📊  Total annual ROI: ${total}`,
+      ``,
+      `Turns out I've been making the right call this whole time.`,
+    ].join('\n');
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('share-btn');
+      btn.innerHTML = '<span>✅</span> Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = '<span>📋</span> Copy My Results';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // Init on load
+  calcROI();
 </script>
 
 </body>
