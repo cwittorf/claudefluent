@@ -1,0 +1,24 @@
+{
+  "name": "claudefluent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node generate-image.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwittorf/claudefluent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cwittorf/claudefluent/issues"
+  },
+  "homepage": "https://github.com/cwittorf/claudefluent#readme",
+  "dependencies": {
+    "@google/genai": "^1.45.0"
+  }
+}
