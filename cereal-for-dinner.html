@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cereal for Dinner Is Valid: The Case for Apple Jacks at 10pm</title>
+  <meta name="description" content="Cereal for dinner isn't a crime. It's a lifestyle. Here's why Apple Jacks is the right cereal for when you're done adulting for the day." />
+  <meta name="keywords" content="cereal for dinner, cereal at night, cereal as a meal, cereal snack adults, late night cereal, Apple Jacks" />
+  <link rel="canonical" href="https://applejacks.com/cereal-for-dinner" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cereal for Dinner Is Valid: The Case for Apple Jacks at 10pm" />
+  <meta property="og:description" content="Cereal for dinner isn't a crime. It's a lifestyle. Here's why Apple Jacks is the right cereal for when you're done adulting for the day." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="images/cereal-for-dinner-hero.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cereal for Dinner Is Valid: The Case for Apple Jacks at 10pm",
+    "description": "Cereal for dinner isn't a crime. It's a lifestyle. Here's why Apple Jacks is the right cereal for when you're done adulting for the day.",
+    "keywords": "cereal for dinner, cereal at night, cereal as a meal, cereal snack adults, late night cereal",
+    "author": {
+      "@type": "Organization",
+      "name": "Apple Jacks"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Apple Jacks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "images/cereal-for-dinner-hero.png"
+      }
+    },
+    "image": "images/cereal-for-dinner-hero.png",
+    "datePublished": "2026-03-12",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://applejacks.com/cereal-for-dinner"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:         #0C0C0A;
+      --surface:    #141410;
+      --surface-2:  #1C1C16;
+      --border:     rgba(255,255,255,0.07);
+      --orange:     #F47B20;
+      --orange-dim: rgba(244,123,32,0.15);
+      --acid:       #C8F135;
+      --acid-dim:   rgba(200,241,53,0.12);
+      --cream:      #EFE6CF;
+      --cream-dim:  rgba(239,230,207,0.5);
+      --muted:      rgba(239,230,207,0.35);
+      --white:      #F8F6F0;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* ── GRAIN OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 300px 300px;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(12, 12, 10, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav ul li a {
+      color: var(--cream-dim);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: var(--white);
+    }
+
+    .nav-pill {
+      background: var(--orange) !important;
+      color: var(--bg) !important;
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-weight: 700 !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-pill:hover {
+      opacity: 0.88;
+      color: var(--bg) !important;
+    }
+
+    /* ── SHARED LAYOUT ── */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    section {
+      padding: 120px 0;
+    }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow-line {
+      width: 32px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .eyebrow-text {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── HEADINGS ── */
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      color: var(--white);
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    h2 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--bg);
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--cream);
+      border-radius: 8px;
+      padding: 13px 27px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.2);
+      color: var(--white);
+    }
+
+    /* ── FADE-UP ANIMATION ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 0;
+      background: var(--bg);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/cereal-for-dinner-hero.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(12,12,10,0.25) 0%,
+        rgba(12,12,10,0.55) 40%,
+        rgba(12,12,10,0.92) 80%,
+        rgba(12,12,10,1.0) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 0 40px 100px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      color: var(--cream-dim);
+      max-width: 560px;
+      line-height: 1.6;
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+
+    /* ── PERMISSION SLIP ── */
+    #permission {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .permission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .permission-heading {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    .permission-heading em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .permission-body p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--cream-dim);
+      margin-bottom: 20px;
+    }
+
+    .permission-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .permission-body strong {
+      color: var(--cream);
+      font-weight: 700;
+    }
+
+    /* ── WHY AT NIGHT ── */
+    #why-night {
+      background: var(--bg);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .section-header .eyebrow {
+      justify-content: center;
+    }
+
+    .section-header p {
+      font-size: 1.0625rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 20px auto 0;
+      line-height: 1.65;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      border-color: rgba(244,123,32,0.3);
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      font-size: 2.25rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .card p {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .card-time {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: var(--orange-dim);
+      border-radius: 4px;
+      padding: 4px 10px;
+      margin-bottom: 16px;
+    }
+
+    /* ── RANKED LIST ── */
+    #ranked {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ranked-intro {
+      font-size: 1.0625rem;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.65;
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+
+    .ranked-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .ranked-item {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 28px 32px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.2s;
+    }
+
+    .ranked-item:hover {
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .ranked-item.winner {
+      background: var(--orange-dim);
+      border-color: rgba(244,123,32,0.25);
+    }
+
+    .rank-number {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .ranked-item.winner .rank-number {
+      color: var(--orange);
+    }
+
+    .rank-content h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .ranked-item.winner .rank-content h4 {
+      color: var(--orange);
+    }
+
+    .rank-content p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .rank-verdict {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .ranked-item.winner .rank-verdict {
+      color: var(--acid);
+    }
+
+    /* ── NUTRITION ── */
+    #nutrition {
+      background: var(--bg);
+    }
+
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .nutrition-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .stat-label {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--cream-dim);
+    }
+
+    .stat-value {
+      font-family: 'Fraunces', serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--orange);
+    }
+
+    .nutrition-copy h2 {
+      margin-bottom: 24px;
+    }
+
+    .nutrition-copy p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--cream-dim);
+      margin-bottom: 20px;
+    }
+
+    .nutrition-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .nutrition-copy .disclaimer {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+
+    /* ── CTA SECTION ── */
+    #cta-bottom {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .cta-kicker {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .cta-headline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .cta-headline em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .cta-sub {
+      font-size: 1.0625rem;
+      color: var(--cream-dim);
+      max-width: 440px;
+      margin: 0 auto 48px;
+      line-height: 1.65;
+    }
+
+    .cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-logo em {
+      font-style: italic;
+      color: var(--orange);
+      opacity: 0.7;
+    }
+
+    footer p {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      nav ul { gap: 20px; }
+      nav ul li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+
+      .container { padding: 0 24px; }
+      section { padding: 80px 0; }
+
+      .hero-content { padding: 0 24px 80px; }
+
+      .permission-grid,
+      .nutrition-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .cards-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      .ranked-item { grid-template-columns: 40px 1fr; gap: 16px; padding: 20px; }
+      .rank-verdict { display: none; }
+
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
+      .cta-headline { font-size: clamp(2rem, 10vw, 3rem); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Apple<em>Jacks</em></a>
+    <ul>
+      <li><a href="index.html#usecases">When to Eat It</a></li>
+      <li><a href="index.html#morning">Your Morning</a></li>
+      <li><a href="index.html#skeptic">Real Talk</a></li>
+      <li><a href="index.html#roi">ROI Calc</a></li>
+      <li><a href="index.html#stockup" class="nav-pill">Stock Up</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ── SECTION 1: HERO ── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="eyebrow fade-up">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">No Judgment. Just Cereal.</span>
+      </div>
+      <h1 class="fade-up" style="transition-delay: 0.1s;">
+        Cereal for Dinner.<br><em>Correct.</em>
+      </h1>
+      <p class="hero-sub fade-up" style="transition-delay: 0.2s;">
+        It's 10pm. You're done. The bowl is ready. There's no wrong here.
+      </p>
+      <a href="index.html#stockup" class="btn-primary fade-up" style="transition-delay: 0.3s;">
+        Get the Box &rarr;
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 2: THE PERMISSION SLIP ── -->
+  <section id="permission">
+    <div class="container">
+      <div class="permission-grid">
+
+        <div class="fade-up">
+          <div class="eyebrow">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">The Permission Slip</span>
+          </div>
+          <h2 class="permission-heading">
+            You're an adult.<br>
+            <em>Eat what you want.</em>
+          </h2>
+        </div>
+
+        <div class="permission-body fade-up" style="transition-delay: 0.15s;">
+          <p>
+            <strong>Here's the thing nobody tells you when you turn 18:</strong> you can eat cereal for dinner and zero laws are broken. Not one. You are a fully licensed adult operating in a free country with a pantry you paid for.
+          </p>
+          <p>
+            Cereal is faster than anything you'd actually cook. It's faster than pasta. Faster than eggs. Faster than heating up whatever's in the fridge that you're not sure about anymore. You pour, you add milk, you're done before you've even found your phone.
+          </p>
+          <p>
+            And honestly? <strong>A bowl of Apple Jacks at night beats a sad microwave meal every single time.</strong> You've known this since you were tall enough to reach the cabinet. You were right then. You're right now.
+          </p>
+          <p>
+            Cereal as a meal is not a compromise. It's a decision. A correct one.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 3: WHY APPLE JACKS AT NIGHT HITS DIFFERENT ── -->
+  <section id="why-night">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">The Night Shift Case</span>
+        </div>
+        <h2>Why Apple Jacks at Night<br><em>Hits Different</em></h2>
+        <p>Three things that no other late night cereal snack can touch.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card fade-up" style="transition-delay: 0.05s;">
+          <span class="card-icon">⏱</span>
+          <span class="card-time">90 Seconds</span>
+          <h3>Ready in 90 Seconds</h3>
+          <p>
+            Literally faster than any other dinner option you're considering right now. No pan. No preheat. No waiting. Bowl, cereal, milk, done. You're already on the couch before the thought of cooking could even form.
+          </p>
+        </div>
+
+        <div class="card fade-up" style="transition-delay: 0.15s;">
+          <span class="card-icon">🌙</span>
+          <span class="card-time">The Midnight Flavor</span>
+          <h3>The Cinnamon-Apple Thing</h3>
+          <p>
+            Something happens at night. The cinnamon-apple flavor gets more pronounced. More satisfying. More right. Nobody has studied this. Nobody needs to. You've experienced it. That's enough science.
+          </p>
+        </div>
+
+        <div class="card fade-up" style="transition-delay: 0.25s;">
+          <span class="card-icon">✓</span>
+          <span class="card-time">Zero Cleanup</span>
+          <h3>Zero Cleanup</h3>
+          <p>
+            Bowl. Spoon. Done. Rinse it if you want, or leave it until morning — that's between you and your future self. No pans to scrub. No cutting board to wipe down. Just freedom.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 4: THE LATE NIGHT LINEUP: RANKED ── -->
+  <section id="ranked">
+    <div class="container">
+      <div class="fade-up">
+        <div class="eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Definitive Rankings</span>
+        </div>
+        <h2>The Late Night Lineup:<br><em>Ranked</em></h2>
+        <p class="ranked-intro">
+          It's 10pm. You need dinner. Here's every option, scored with full transparency and no bias whatsoever.
+        </p>
+      </div>
+
+      <div class="ranked-list">
+
+        <div class="ranked-item fade-up" style="transition-delay: 0.05s;">
+          <div class="rank-number">5</div>
+          <div class="rank-content">
+            <h4>Leftover Pizza</h4>
+            <p>Genuinely great — but you have to find it, confirm it's still safe, and decide if cold or reheated. That's three decisions at 10pm. That's too many.</p>
+          </div>
+          <div class="rank-verdict">Good. Complicated.</div>
+        </div>
+
+        <div class="ranked-item fade-up" style="transition-delay: 0.1s;">
+          <div class="rank-number">4</div>
+          <div class="rank-content">
+            <h4>Eggs</h4>
+            <p>Requires standing at a stove. Requires a pan. Requires you to be present in a way you simply aren't right now. Technically food. Zero atmosphere.</p>
+          </div>
+          <div class="rank-verdict">Requires Effort</div>
+        </div>
+
+        <div class="ranked-item fade-up" style="transition-delay: 0.15s;">
+          <div class="rank-number">3</div>
+          <div class="rank-content">
+            <h4>Granola</h4>
+            <p>You're telling yourself this is a meal. It's not. It's a topping. You know this. It's time to be honest.</p>
+          </div>
+          <div class="rank-verdict">You're Fooling Yourself</div>
+        </div>
+
+        <div class="ranked-item fade-up" style="transition-delay: 0.2s;">
+          <div class="rank-number">2</div>
+          <div class="rank-content">
+            <h4>Another Cereal</h4>
+            <p>Fine. Sure. Perfectly acceptable. But you had a choice and you made the wrong one. It's there if you need it.</p>
+          </div>
+          <div class="rank-verdict">Fine, But Why?</div>
+        </div>
+
+        <div class="ranked-item winner fade-up" style="transition-delay: 0.25s;">
+          <div class="rank-number">1</div>
+          <div class="rank-content">
+            <h4>Apple Jacks</h4>
+            <p>Cinnamon-apple loops. Ready in 90 seconds. No cleanup. Correct flavor for the current hour. This is not a debate.</p>
+          </div>
+          <div class="rank-verdict">Correct.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 5: WHAT YOU'RE ACTUALLY GETTING ── -->
+  <section id="nutrition">
+    <div class="container">
+      <div class="nutrition-grid">
+
+        <div class="nutrition-stats fade-up">
+          <div class="stat-row">
+            <span class="stat-label">First Ingredient</span>
+            <span class="stat-value">Whole Grain</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Vitamins & Minerals</span>
+            <span class="stat-value">10+</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Sugar Per Serving</span>
+            <span class="stat-value">&lt;10g</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Time to Prepare</span>
+            <span class="stat-value">90 sec</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Dishes to Wash</span>
+            <span class="stat-value">1 bowl</span>
+          </div>
+        </div>
+
+        <div class="nutrition-copy fade-up" style="transition-delay: 0.15s;">
+          <div class="eyebrow">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">For What It's Worth</span>
+          </div>
+          <h2>What You're<br><em>Actually Getting</em></h2>
+          <p>
+            Whole grain is the first ingredient. There are over 10 vitamins and minerals in there. Under 10 grams of sugar per serving.
+          </p>
+          <p>
+            These are real facts that exist about Apple Jacks. We're sharing them here for completeness.
+          </p>
+          <p class="disclaimer">
+            But honestly? You're not eating it for the vitamins. You're eating it because it's 10pm, you're done with the day, and this is the right bowl. That's a perfectly valid reason. Possibly the best reason.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 6: CTA ── -->
+  <section id="cta-bottom">
+    <div class="container">
+      <p class="cta-kicker fade-up">Never Run Out Again</p>
+      <h2 class="cta-headline fade-up" style="transition-delay: 0.1s;">
+        Keep the Pantry<br><em>Stocked.</em>
+      </h2>
+      <p class="cta-sub fade-up" style="transition-delay: 0.2s;">
+        The only thing worse than a long day is opening the cabinet at 10pm and coming up empty. Don't let that happen.
+      </p>
+      <div class="cta-buttons fade-up" style="transition-delay: 0.3s;">
+        <a href="index.html#stockup" class="btn-primary">Stock Up Now &rarr;</a>
+        <a href="index.html" class="btn-secondary">See the Full Story</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <a href="index.html" class="footer-logo">Apple<em>Jacks</em></a>
+    <p>&copy; 2026 Apple Jacks. Cereal for dinner is valid.</p>
+  </footer>
+
+
+  <!-- ── FADE-UP SCROLL ANIMATIONS ── -->
+  <script>
+    (function () {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      // Observe all fade-up elements
+      document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+
+      // Hero elements visible on load
+      window.addEventListener('load', () => {
+        document.querySelectorAll('#hero .fade-up').forEach((el) => {
+          el.classList.add('visible');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

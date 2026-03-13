@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saturday Morning Breakfast Cereal: Apple Jacks Has Always Been the One</title>
+  <meta name="description" content="Saturday morning cereal isn't just for kids. If you grew up eating Apple Jacks on a Saturday morning, you already know. Here's why it still hits." />
+  <meta name="keywords" content="saturday morning breakfast cereal, saturday morning cereal, best breakfast cereal, nostalgic cereal, apple jacks cereal" />
+  <meta property="og:title" content="Saturday Morning Breakfast Cereal: Apple Jacks Has Always Been the One" />
+  <meta property="og:description" content="Saturday morning cereal isn't just for kids. If you grew up eating Apple Jacks on a Saturday morning, you already know. Here's why it still hits." />
+  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://applejacks.com/saturday-morning-cereal" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "name": "Saturday Morning Breakfast Cereal: Apple Jacks Has Always Been the One",
+    "description": "Saturday morning cereal isn't just for kids. If you grew up eating Apple Jacks on a Saturday morning, you already know. Here's why it still hits.",
+    "keywords": "saturday morning breakfast cereal, saturday morning cereal, best breakfast cereal, nostalgic cereal, apple jacks",
+    "author": {
+      "@type": "Person",
+      "name": "Alex"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Apple Jacks"
+    },
+    "datePublished": "2026-03-12",
+    "image": "images/saturday-morning-hero.png"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:         #0C0C0A;
+      --surface:    #141410;
+      --surface-2:  #1C1C16;
+      --border:     rgba(255,255,255,0.07);
+      --orange:     #F47B20;
+      --orange-dim: rgba(244,123,32,0.15);
+      --acid:       #C8F135;
+      --acid-dim:   rgba(200,241,53,0.12);
+      --cream:      #EFE6CF;
+      --cream-dim:  rgba(239,230,207,0.5);
+      --muted:      rgba(239,230,207,0.35);
+      --white:      #F8F6F0;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* ── GRAIN OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+      height: 64px;
+      background: rgba(12,12,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+
+    nav ul li a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--cream-dim);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--white);
+    }
+
+    .nav-pill {
+      background: var(--orange) !important;
+      color: var(--bg) !important;
+      font-weight: 700 !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: opacity 0.2s ease !important;
+    }
+
+    .nav-pill:hover {
+      opacity: 0.85;
+      color: var(--bg) !important;
+    }
+
+    /* ── FADE-UP ANIMATION ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow-line {
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .eyebrow-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+    }
+
+    /* ── SECTION NUMBER ── */
+    .section-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--orange);
+      font-size: 0.875rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--bg);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.2);
+      color: var(--white);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 120px clamp(1.5rem, 6vw, 5rem) clamp(4rem, 8vw, 7rem);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/saturday-morning-hero.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(12,12,10,0.3) 0%,
+        rgba(12,12,10,0.5) 40%,
+        rgba(12,12,10,0.88) 75%,
+        rgba(12,12,10,1) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: var(--cream-dim);
+      max-width: 540px;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ── SECTION SHARED ── */
+    .section {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 6vw, 5rem);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-full {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* ── THE RITUAL ── */
+    .ritual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .ritual-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ritual-text h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.25rem, 4vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .ritual-text h2 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .ritual-text p {
+      font-size: 1.0625rem;
+      color: var(--cream-dim);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .stat-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--orange);
+      opacity: 0.6;
+    }
+
+    .stat-card:hover {
+      border-color: rgba(244,123,32,0.25);
+    }
+
+    .stat-number {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--white);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-desc {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── WHY APPLE JACKS WINS ── */
+    .wins-header {
+      max-width: 640px;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .wins-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.25rem, 4vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .wins-header h2 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .wins-header p {
+      font-size: 1.0625rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+    }
+
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      .feature-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.25rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(244,123,32,0.3);
+      transform: translateY(-2px);
+    }
+
+    .feature-card-accent {
+      width: 40px;
+      height: 40px;
+      background: var(--orange-dim);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(244,123,32,0.2);
+    }
+
+    .feature-card-accent span {
+      font-size: 1.25rem;
+    }
+
+    .feature-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9375rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+    }
+
+    .feature-card-tag {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--orange);
+      background: var(--orange-dim);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* ── LINEUP / COMPARISON ── */
+    .lineup-header {
+      max-width: 640px;
+      margin-bottom: clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .lineup-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.25rem, 4vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .lineup-header h2 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .lineup-header p {
+      font-size: 1.0625rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .comparison-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+    }
+
+    .comparison-card.winner {
+      background: var(--surface-2);
+      border-color: rgba(244,123,32,0.3);
+      position: relative;
+    }
+
+    .comparison-card.winner::before {
+      content: 'THE CHOICE';
+      position: absolute;
+      top: -1px;
+      right: 24px;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--orange);
+      color: var(--bg);
+      padding: 4px 10px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .comparison-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .comparison-card.winner h3 {
+      color: var(--orange);
+    }
+
+    .comparison-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.875rem;
+    }
+
+    .comparison-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .comparison-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6875rem;
+      font-weight: 800;
+    }
+
+    .icon-yes {
+      background: rgba(200,241,53,0.15);
+      color: var(--acid);
+      border: 1px solid rgba(200,241,53,0.3);
+    }
+
+    .icon-no {
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .comparison-label {
+      font-size: 0.9375rem;
+      color: var(--cream-dim);
+      line-height: 1.5;
+    }
+
+    .comparison-card.winner .comparison-label {
+      color: var(--cream);
+    }
+
+    .lineup-note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .lineup-note-icon {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.75rem;
+      color: var(--orange);
+      font-weight: 300;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .lineup-note p {
+      font-size: 1rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+    }
+
+    .lineup-note p strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 6vw, 5rem);
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .cta-inner h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-inner h2 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .cta-inner p {
+      font-size: 1.0625rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-inner p strong {
+      color: var(--white);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem clamp(1.5rem, 6vw, 5rem);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .footer-logo em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--cream);
+    }
+
+    .footer-copy {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    /* ── DIVIDER LINE ── */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* ── RESPONSIVE NAV ── */
+    @media (max-width: 700px) {
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Apple<em>Jacks</em></a>
+    <ul>
+      <li><a href="index.html#usecases">When to Eat It</a></li>
+      <li><a href="index.html#morning">Your Morning</a></li>
+      <li><a href="index.html#skeptic">Real Talk</a></li>
+      <li><a href="index.html#roi">ROI Calc</a></li>
+      <li><a href="index.html#stockup" class="nav-pill">Stock Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 1: HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="eyebrow fade-up">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Cereal for People Who Remember</span>
+      </div>
+      <h1 class="fade-up" style="transition-delay: 0.1s;">
+        Saturday Morning<br><em>Still Belongs to You.</em>
+      </h1>
+      <p class="hero-sub fade-up" style="transition-delay: 0.2s;">
+        You remember the feeling. Saturday morning, 8am, cartoons on, nobody telling you what to eat. Apple Jacks was the saturday morning breakfast cereal. Pour it. Sit down. The day is yours.
+      </p>
+      <div class="hero-cta fade-up" style="transition-delay: 0.3s;">
+        <a href="index.html#stockup" class="btn-primary">Stock Up Now</a>
+        <a href="#ritual" class="btn-secondary">Read the Case</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 2: THE RITUAL
+  ══════════════════════════════════════════════════════ -->
+  <section class="section" id="ritual">
+    <div class="ritual-grid">
+
+      <div class="ritual-text fade-up">
+        <span class="section-num">01</span>
+        <div class="eyebrow" style="margin-bottom: 1.25rem;">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">The Origin Story</span>
+        </div>
+        <h2>The <em>Saturday Morning</em> Ritual Is Not Dead.</h2>
+        <p>
+          There was a version of Saturday morning that belonged entirely to you. You woke up before anyone else. You padded to the kitchen in socks. You grabbed the box — the one with the orange and green loops — and you poured a bowl that was, honestly, a little too full.
+        </p>
+        <p>
+          Nobody was awake to tell you that was too much sugar. Nobody cared. The cartoon was starting and your bowl was ready and that was the whole deal.
+        </p>
+        <p>
+          Twenty-something years later, the ritual is still available. Saturday mornings still exist. Apple Jacks still tastes exactly like that. The only thing that's changed is that now you have to buy it yourself. That's not a downgrade.
+        </p>
+        <p style="color: var(--muted); font-size: 0.9375rem;">
+          The best saturday morning cereal isn't a childhood memory. It's a standing Saturday appointment.
+        </p>
+      </div>
+
+      <div class="stat-cards fade-up" style="transition-delay: 0.15s;">
+        <div class="stat-card">
+          <span class="stat-number">~20</span>
+          <span class="stat-label">Years of Saturday Mornings</span>
+          <span class="stat-desc">That's roughly 1,040 Saturdays. Apple Jacks has been the right call for most of them. The math doesn't lie.</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">4 min</span>
+          <span class="stat-label">Stays Crunchy in Milk</span>
+          <span class="stat-desc">Minimum viable crunch time before things get sad. Apple Jacks clears the bar. Comfortably.</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Reasons to Switch</span>
+          <span class="stat-desc">We looked. We checked. We tried other cereals out of obligation. Zero compelling arguments were found.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 3: WHY APPLE JACKS WINS
+  ══════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="wins-header fade-up">
+      <span class="section-num">02</span>
+      <h2>Why Apple Jacks <em>Wins</em> Saturday Morning.</h2>
+      <p>
+        It's not complicated. The best breakfast cereal for Saturday morning is the one you actually want to eat at 8am without having to think about it. Here's the breakdown.
+      </p>
+    </div>
+
+    <div class="feature-cards">
+
+      <div class="feature-card fade-up" style="transition-delay: 0.05s;">
+        <div class="feature-card-accent"><span>⏱</span></div>
+        <h3>Ready in 90 Seconds</h3>
+        <p>
+          Bowl. Cereal. Milk. Done. There is no recipe. There is no prep. There is no "let that cool for a minute." You pour it and you eat it. That's the whole preparation section of this process.
+        </p>
+        <span class="feature-card-tag">Zero Friction</span>
+      </div>
+
+      <div class="feature-card fade-up" style="transition-delay: 0.12s;">
+        <div class="feature-card-accent"><span>🍎</span></div>
+        <h3>The Flavor You Can't Explain</h3>
+        <p>
+          Cinnamon and apple, technically. But that's like saying a great song is just notes. The flavor of Apple Jacks is something you've loved since age 8 and have never been able to fully describe at a dinner party. That's fine. Some things don't need an explanation.
+        </p>
+        <span class="feature-card-tag">Since Day One</span>
+      </div>
+
+      <div class="feature-card fade-up" style="transition-delay: 0.2s;">
+        <div class="feature-card-accent"><span>💪</span></div>
+        <h3>Still Crunchy After 4 Minutes</h3>
+        <p>
+          The engineers at Apple Jacks apparently spent serious time on this. The loop holds. You can take a phone call mid-bowl. You can lose the remote and find it. When you come back, the cereal is still doing its job.
+        </p>
+        <span class="feature-card-tag">Structurally Sound</span>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 4: THE SATURDAY MORNING LINEUP
+  ══════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="lineup-header fade-up">
+      <span class="section-num">03</span>
+      <h2>The <em>Saturday Morning</em> Lineup.<br>An Honest Assessment.</h2>
+      <p>
+        You could eat something else on Saturday morning. People do. Here's what that looks like versus what Apple Jacks looks like, without editorializing too much.
+      </p>
+    </div>
+
+    <div class="comparison-grid">
+
+      <div class="comparison-card winner fade-up">
+        <h3>Apple Jacks</h3>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-yes">✓</span>
+          <span class="comparison-label">Bowl is full in 8 seconds flat. Cartoons resume.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-yes">✓</span>
+          <span class="comparison-label">Tastes exactly like 1998. This is a feature, not a bug.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-yes">✓</span>
+          <span class="comparison-label">Zero dishes beyond the bowl. Spoon is optional.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-yes">✓</span>
+          <span class="comparison-label">Cereal milk at the end is a reward, not a problem.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-yes">✓</span>
+          <span class="comparison-label">Can be eaten on the couch. Designed for this use case.</span>
+        </div>
+      </div>
+
+      <div class="comparison-card fade-up" style="transition-delay: 0.1s;">
+        <h3>Everything Else</h3>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-no">✗</span>
+          <span class="comparison-label">Eggs: Requires a pan, attention, and a decision about how runny.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-no">✗</span>
+          <span class="comparison-label">Granola: More expensive, still somehow less satisfying.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-no">✗</span>
+          <span class="comparison-label">Smoothies: Requires a blender. Blenders are loud. It's 8am.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-no">✗</span>
+          <span class="comparison-label">Avocado toast: Requires toasting, slicing, seasoning, and caring.</span>
+        </div>
+        <div class="comparison-item">
+          <span class="comparison-icon icon-no">✗</span>
+          <span class="comparison-label">Not nostalgic. Not the same. You know this already.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lineup-note fade-up">
+      <span class="lineup-note-icon">"</span>
+      <p>
+        This is not an anti-egg stance. Eggs are fine. Eggs have their moment. <strong>Saturday morning is not that moment.</strong> Saturday morning is for the cereal you've been eating since before you had opinions about food. Apple Jacks is that cereal. The case rests.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 5: CTA — NEVER RUN OUT AGAIN
+  ══════════════════════════════════════════════════════ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="eyebrow fade-up" style="justify-content: center;">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Section 04</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="fade-up" style="transition-delay: 0.1s;">
+        <em>Never Run Out</em><br>Again.
+      </h2>
+      <p class="fade-up" style="transition-delay: 0.2s;">
+        The worst version of Sunday morning is opening the cabinet and finding an empty box. <strong>That's a preventable tragedy.</strong> Stock up. Keep three boxes minimum. Future you will be grateful every single Saturday.
+      </p>
+      <div class="cta-buttons fade-up" style="transition-delay: 0.3s;">
+        <a href="index.html#stockup" class="btn-primary">Stock Up Now</a>
+        <a href="index.html" class="btn-secondary">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo">Apple<em>Jacks</em></a>
+    <ul class="footer-links">
+      <li><a href="index.html#usecases">When to Eat It</a></li>
+      <li><a href="index.html#morning">Your Morning</a></li>
+      <li><a href="saturday-morning-cereal.html">Saturday Morning</a></li>
+      <li><a href="index.html#stockup">Stock Up</a></li>
+    </ul>
+    <span class="footer-copy">Apple Jacks. Still the one.</span>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════
+       FADE-UP SCROLL ANIMATION
+  ══════════════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      const targets = document.querySelectorAll('.fade-up');
+
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      targets.forEach(function (el) {
+        observer.observe(el);
+      });
+
+      // Trigger hero elements immediately on load
+      window.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.hero .fade-up').forEach(function (el) {
+          setTimeout(function () {
+            el.classList.add('visible');
+          }, 100);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

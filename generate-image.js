@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
+require('dotenv').config();
 const { GoogleGenAI } = require('@google/genai');
 const fs = require('fs');
 const path = require('path');
 
-const MODEL = 'gemini-2.0-flash-preview-image-generation';
+const MODEL = 'gemini-3-pro-image-preview';
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -49,7 +50,6 @@ async function main() {
 
   const ai = new GoogleGenAI({ apiKey });
 
-  // Build content parts
   const parts = [{ text: opts.prompt }];
 
   if (opts.image) {
@@ -101,6 +101,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error('Error:', err.message || err);
+  console.error('Error:', err.message || JSON.stringify(err));
   process.exit(1);
 });

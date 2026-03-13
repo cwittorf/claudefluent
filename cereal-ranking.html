@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cereal Ranking: The Definitive Adult List (Apple Jacks Is #1)</title>
+  <meta name="description" content="The definitive cereal ranking for adults who grew up eating the good stuff. Scored on flavor, crunch, nostalgia, and no-BS honesty. Apple Jacks wins." />
+  <meta name="keywords" content="cereal ranking, best cereals ranked, top 10 cereals, best cereals of all time, cereal tier list" />
+  <link rel="canonical" href="https://applejacks.vercel.app/cereal-ranking.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cereal Ranking: The Definitive Adult List (Apple Jacks Is #1)" />
+  <meta property="og:description" content="The definitive cereal ranking for adults who grew up eating the good stuff. Scored on flavor, crunch, nostalgia, and no-BS honesty. Apple Jacks wins." />
+  <meta property="og:image" content="images/cereal-ranking-hero.png" />
+  <meta property="og:type" content="article" />
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cereal Ranking: The Definitive Adult List (Apple Jacks Is #1)",
+    "description": "The definitive cereal ranking for adults who grew up eating the good stuff. Scored on flavor, crunch, nostalgia, and no-BS honesty. Apple Jacks wins.",
+    "image": "images/cereal-ranking-hero.png",
+    "datePublished": "2026-03-12",
+    "dateModified": "2026-03-12",
+    "author": {
+      "@type": "Organization",
+      "name": "Apple Jacks"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Apple Jacks"
+    },
+    "keywords": "cereal ranking, best cereals ranked, top 10 cereals, best cereals of all time, cereal tier list",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://applejacks.vercel.app/cereal-ranking.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── CSS Variables ── */
+    :root {
+      --bg: #0C0C0A;
+      --surface: #141410;
+      --surface-2: #1C1C16;
+      --border: rgba(255,255,255,0.07);
+      --orange: #F47B20;
+      --acid: #C8F135;
+      --cream: #EFE6CF;
+      --cream-dim: rgba(239,230,207,0.5);
+      --muted: rgba(239,230,207,0.35);
+      --white: #F8F6F0;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain Overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)' opacity='1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+
+    /* ── Typography ── */
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      color: var(--white);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    p { color: var(--cream-dim); }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; max-width: 100%; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    hr.section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(12, 12, 10, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .nav-logo em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    nav ul li a {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+
+    nav ul li a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .nav-pill {
+      background: var(--orange) !important;
+      color: #1a0d00 !important;
+      border-radius: 999px !important;
+      padding: 6px 16px !important;
+    }
+
+    .nav-pill:hover {
+      background: #ff8f35 !important;
+    }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow-line {
+      width: 32px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .eyebrow-text {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: #1a0d00;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary:hover {
+      background: #ff8f35;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active { transform: translateY(0); }
+
+    /* ── Hero ── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/cereal-ranking-hero.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(12,12,10,0.82) 0%,
+        rgba(12,12,10,0.65) 50%,
+        rgba(12,12,10,0.88) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    .hero-content p.subtext {
+      font-size: 1.1rem;
+      color: var(--cream-dim);
+      max-width: 560px;
+      margin: 28px 0 40px;
+      line-height: 1.6;
+    }
+
+    /* ── Criteria Section ── */
+    #criteria {
+      background: var(--surface);
+    }
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 52px;
+    }
+
+    .criteria-card {
+      background: var(--surface-2);
+      padding: 32px 28px;
+      transition: background 0.2s;
+    }
+
+    .criteria-card:hover { background: #222218; }
+
+    .criteria-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .criteria-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .criteria-card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── Rankings Section ── */
+    #rankings {
+      background: var(--bg);
+    }
+
+    .rankings-list {
+      list-style: none;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .ranking-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 28px;
+      align-items: start;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .ranking-item:hover {
+      border-color: rgba(255,255,255,0.12);
+      background: var(--surface-2);
+    }
+
+    .ranking-item.rank-1 {
+      border-color: rgba(244, 123, 32, 0.35);
+      background: linear-gradient(135deg, rgba(244,123,32,0.06) 0%, var(--surface) 60%);
+    }
+
+    .ranking-item.rank-1:hover {
+      border-color: rgba(244,123,32,0.55);
+    }
+
+    .rank-number {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--muted);
+      padding-top: 4px;
+    }
+
+    .ranking-item.rank-1 .rank-number {
+      color: var(--orange);
+    }
+
+    .ranking-body {}
+
+    .ranking-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.1;
+    }
+
+    .ranking-item.rank-1 .ranking-name {
+      color: var(--orange);
+    }
+
+    .ranking-take {
+      font-size: 0.95rem;
+      color: var(--cream-dim);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      max-width: 620px;
+    }
+
+    .score-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--muted);
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .badge.flavor .badge-dot { background: var(--orange); }
+    .badge.crunch .badge-dot { background: var(--acid); }
+    .badge.nostalgia .badge-dot { background: #a78bfa; }
+    .badge.vibe .badge-dot { background: #38bdf8; }
+
+    .badge.flavor { border-color: rgba(244,123,32,0.25); }
+    .badge.crunch { border-color: rgba(200,241,53,0.25); }
+    .badge.nostalgia { border-color: rgba(167,139,250,0.25); }
+    .badge.vibe { border-color: rgba(56,189,248,0.25); }
+
+    /* ── Why Apple Jacks Wins ── */
+    #why-apple-jacks {
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #why-apple-jacks::after {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(244,123,32,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .why-inner {
+      max-width: 720px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .why-points {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .why-point {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 0 20px;
+      align-items: start;
+    }
+
+    .why-point-number {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1.2;
+    }
+
+    .why-point h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .why-point p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── CTA ── */
+    #cta {
+      background: var(--bg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(244,123,32,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cta-tagline {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .cta-inner h2 {
+      margin-bottom: 16px;
+    }
+
+    .cta-inner h2 em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .cta-inner p {
+      font-size: 1rem;
+      color: var(--cream-dim);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--orange);
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Fade-up animation ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* stagger helpers */
+    .fade-up[data-delay="1"] { transition-delay: 0.05s; }
+    .fade-up[data-delay="2"] { transition-delay: 0.12s; }
+    .fade-up[data-delay="3"] { transition-delay: 0.19s; }
+    .fade-up[data-delay="4"] { transition-delay: 0.26s; }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      nav ul { display: none; }
+
+      .ranking-item {
+        grid-template-columns: 56px 1fr;
+        gap: 0 16px;
+        padding: 24px 20px;
+      }
+
+      .rank-number { font-size: 2.8rem; }
+
+      section { padding: 72px 0; }
+
+      .criteria-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .criteria-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Nav ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Apple<em>Jacks</em></a>
+      <ul>
+        <li><a href="index.html#usecases">When to Eat It</a></li>
+        <li><a href="index.html#morning">Your Morning</a></li>
+        <li><a href="index.html#skeptic">Real Talk</a></li>
+        <li><a href="index.html#roi">ROI Calc</a></li>
+        <li><a href="index.html#stockup" class="nav-pill">Stock Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="eyebrow fade-up">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">The Definitive List</span>
+      </div>
+      <h1 class="fade-up" data-delay="1">Cereal Ranking:<br><em>The Adult Edition.</em></h1>
+      <p class="subtext fade-up" data-delay="2">No methodology. No nutritionists. Just someone who's been eating cereal for 25 years and has opinions.</p>
+      <a href="#rankings" class="btn-primary fade-up" data-delay="3">
+        Jump to the Rankings
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ── Criteria Section ── -->
+  <section id="criteria">
+    <div class="container">
+      <div class="eyebrow fade-up">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">The Method</span>
+      </div>
+      <h2 class="fade-up" data-delay="1">How the Rankings<br>Actually Work</h2>
+
+      <div class="criteria-grid">
+        <div class="criteria-card fade-up" data-delay="1">
+          <div class="criteria-icon">&#127774;</div>
+          <h3>Flavor Complexity</h3>
+          <p>Is there actually something interesting happening in your mouth, or is it just "sweet"? A good cereal has layers — something identifiable, something that doesn't disappear after three bites.</p>
+        </div>
+        <div class="criteria-card fade-up" data-delay="2">
+          <div class="criteria-icon">&#127774;</div>
+          <h3>Crunch Durability</h3>
+          <p>How long does it hold up in milk? This is a legitimate engineering question. A cereal that turns to mush in 90 seconds is asking you to pour and sprint. Bonus points for structural integrity.</p>
+        </div>
+        <div class="criteria-card fade-up" data-delay="3">
+          <div class="criteria-icon">&#127774;</div>
+          <h3>Nostalgia Factor</h3>
+          <p>Does eating it feel like something? Not just taste — feel. Does it put you somewhere? Saturday morning cartoons, staying at a grandparent's house, a specific summer? That's worth points.</p>
+        </div>
+        <div class="criteria-card fade-up" data-delay="4">
+          <div class="criteria-icon">&#127774;</div>
+          <h3>The Vibe</h3>
+          <p>Does this cereal fit into your actual adult life, or are you embarrassed buying it at 30? Can you eat it at midnight and feel fine about it? Does it go with coffee? Vibe is non-negotiable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ── Rankings Section ── -->
+  <section id="rankings">
+    <div class="container">
+      <div class="eyebrow fade-up">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">The Rankings</span>
+      </div>
+      <h2 class="fade-up" data-delay="1">Top 10 Cereals Ranked:<br>Best Cereals of All Time</h2>
+
+      <ul class="rankings-list">
+
+        <!-- #1 Apple Jacks -->
+        <li class="ranking-item rank-1 fade-up">
+          <div class="rank-number">01</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Apple Jacks</div>
+            <p class="ranking-take">
+              The flavor doesn't make sense — it says apple, it tastes like cinnamon, the loops are orange and green, and nobody has ever questioned this. You've been eating it for 20 years and you'll eat it for 20 more. The crunch holds up longer than you expect, the nostalgia hits harder than it has any right to, and somehow it still works at 11pm on a Tuesday. You don't need it to make sense. It works. #1.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Distinct</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Solid</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Maximum</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Iconic</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #2 Froot Loops -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">02</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Froot Loops</div>
+            <p class="ranking-take">
+              Basically the same move as Apple Jacks — bright loops, a flavor that's more of a concept than a specific fruit, impossible to eat just one bowl. Froot Loops is louder. More sugar-forward, more candy-adjacent, slightly less interesting because of it. When you want Apple Jacks and there's no Apple Jacks, this is the correct substitution. A very solid #2 that knows exactly what it is.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Bold</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Good</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: High</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Reliable</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #3 Cap'n Crunch -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">03</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Cap'n Crunch</div>
+            <p class="ranking-take">
+              Cap'n Crunch will destroy the roof of your mouth and you will eat it anyway. That's the deal. The crunch is absurd — these squares are engineered for structural permanence in a way that borders on hostile. The flavor is buttery-sweet in a way that shouldn't work as a breakfast food and completely does. You eat it knowing the consequences. You eat it anyway. Respect is the only word.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Buttery</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Extreme</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Strong</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Committed</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #4 Cocoa Puffs -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">04</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Cocoa Puffs</div>
+            <p class="ranking-take">
+              Cocoa Puffs turns the milk into chocolate milk. That's it. That's the whole argument. You're not just getting a bowl of cereal — you're getting a bowl of cereal that produces a chocolate bonus drink at the end. That's objectively good engineering and it deserves recognition. The cereal itself is good; the milk transformation is great. The fact that this is only #4 is a testament to how good the top three are.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Chocolate</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Average</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: High</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Practical</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #5 Lucky Charms -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">05</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Lucky Charms</div>
+            <p class="ranking-take">
+              The marshmallows are the only reason Lucky Charms exists and everyone who's ever eaten Lucky Charms knows this. The oat pieces are filler. Nobody is eating Lucky Charms for the oat pieces. The move is always to eat around the oat pieces and save the marshmallows, and if you say you don't do this you're lying. Good cereal. Held together entirely by a handful of freeze-dried sugar shapes. That's fine. That's enough.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Marshmallow</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Uneven</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Very High</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Theatrical</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #6 Honey Nut Cheerios -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">06</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Honey Nut Cheerios</div>
+            <p class="ranking-take">
+              You eat Honey Nut Cheerios when you're pretending you're going to be healthier. You're not. But the cereal is still good, and it earns its spot on that premise alone. The honey sweetness is balanced, the crunch is respectable, and it's the one cereal you can put on the counter when people come over without feeling the need to explain yourself. Gateway cereal. Still cereal. Still good.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Honey</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Decent</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Moderate</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Respectable</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #7 Frosted Flakes -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">07</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Frosted Flakes</div>
+            <p class="ranking-take">
+              They're greaaaat. They're also just corn with sugar, and that description is completely accurate and not unfair. There's nothing wrong with Frosted Flakes. It's a simple cereal that does what it says and doesn't pretend otherwise. The problem is it has no mystery. You know exactly what you're getting. Sometimes that's fine. Rarely is it interesting enough to be higher than #7 on a list that requires you to actually have opinions.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Sweet Corn</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Decent</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Nostalgic</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Predictable</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #8 Corn Pops -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">08</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Corn Pops</div>
+            <p class="ranking-take">
+              Corn Pops is the most underrated cereal on this list and possibly in the entire cereal aisle. Nobody talks about Corn Pops. Nobody has strong opinions about Corn Pops. Meanwhile, Corn Pops is doing quiet, consistent work — light crunch, that slightly glossy sugared surface, a flavor that's specific and a little weird in a good way. Someone should be talking about Corn Pops. I'm talking about Corn Pops. It belongs here.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Underrated</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Light</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Forgotten</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Quiet</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #9 Raisin Bran -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">09</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Raisin Bran</div>
+            <p class="ranking-take">
+              You're not who you think you are if you're reaching for Raisin Bran. You're telling yourself a story about the kind of person you want to be and that person eats Raisin Bran. That person is 58, has a newspaper subscription, and owns reading glasses they keep on a chain. The raisins are fine. The bran is fine. The overall experience is one of moderate nutritional responsibility. #9 is generous.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Mature</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Minimal</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: None</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Aspirational</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- #10 Granola -->
+        <li class="ranking-item fade-up">
+          <div class="rank-number">10</div>
+          <div class="ranking-body">
+            <div class="ranking-name">Granola</div>
+            <p class="ranking-take">
+              Granola is not a cereal. Granola is an identity. You buy granola because you want to be the kind of person who buys granola — someone who hikes, someone who uses the word "intentional" without irony, someone who owns a wooden salad bowl as a personality trait. It's in a different category entirely: the cereal aisle is just where the store puts it. It's here at #10 only because we had to put it somewhere. It doesn't count.
+            </p>
+            <div class="score-badges">
+              <span class="badge flavor"><span class="badge-dot"></span>Flavor: Earthen</span>
+              <span class="badge crunch"><span class="badge-dot"></span>Crunch: Sure</span>
+              <span class="badge nostalgia"><span class="badge-dot"></span>Nostalgia: Zero</span>
+              <span class="badge vibe"><span class="badge-dot"></span>Vibe: Personality</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ── Why Apple Jacks Wins ── -->
+  <section id="why-apple-jacks">
+    <div class="container">
+      <div class="why-inner">
+        <div class="eyebrow fade-up">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">The Case for #1</span>
+        </div>
+        <h2 class="fade-up" data-delay="1">Why Apple Jacks<br><em style="font-style:italic;color:var(--orange)">Wins This.</em></h2>
+        <p class="fade-up" data-delay="2" style="margin-top:20px;font-size:1.05rem;color:var(--cream-dim);max-width:620px;">
+          This isn't sentiment. It's not a legacy pick or a brand loyalty play. It's a genuine assessment of a cereal that does more things right than anything else in the aisle. Here's the actual argument.
+        </p>
+
+        <div class="why-points">
+          <div class="why-point fade-up" data-delay="1">
+            <div class="why-point-number">01</div>
+            <div>
+              <h3>Flavor Complexity That Doesn't Explain Itself</h3>
+              <p>Apple Jacks tastes like cinnamon-apple-something-else and nobody has ever successfully nailed down the third note. That ambiguity is a feature. You keep eating it trying to figure it out. You never do. You finish the box. This is deliberate genius or a happy accident — either way, it works and nothing else in the top 10 has it.</p>
+            </div>
+          </div>
+          <div class="why-point fade-up" data-delay="2">
+            <div class="why-point-number">02</div>
+            <div>
+              <h3>Crunch That Actually Holds Up</h3>
+              <p>The loop structure isn't just aesthetic — it creates air pockets that slow milk absorption in a meaningful way. You get a solid two-to-three minute crunch window, which is significantly above average for this category. By the time you're done with the bowl, the last few loops still have something left. That's engineering. That's worth points.</p>
+            </div>
+          </div>
+          <div class="why-point fade-up" data-delay="3">
+            <div class="why-point-number">03</div>
+            <div>
+              <h3>Nostalgia That Hits Every Time</h3>
+              <p>It's not just that Apple Jacks has been around. It's that Apple Jacks has been in specific moments — mornings before school, bowls at 11pm when you were 12, the box your mom bought even when she probably thought you'd outgrow it. That specificity of memory is rare. Most cereals fade. Apple Jacks sticks.</p>
+            </div>
+          </div>
+          <div class="why-point fade-up" data-delay="4">
+            <div class="why-point-number">04</div>
+            <div>
+              <h3>The Vibe Is Exactly Right</h3>
+              <p>It doesn't take itself seriously enough to be embarrassing, and it's not so childish that you feel weird about it. Apple Jacks works at breakfast, at midnight, in a bowl while watching something you've seen ten times. There's no wrong context for it. That kind of flexibility is what separates a cereal from a #1 cereal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ── CTA ── -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <p class="cta-tagline fade-up">The Verdict Is In</p>
+        <h2 class="fade-up" data-delay="1">The #1 cereal deserves<br>a spot in <em>your cabinet.</em></h2>
+        <p class="fade-up" data-delay="2">You've read the ranking. You know where this ends up. Stop overthinking it and stock up.</p>
+        <a href="index.html#stockup" class="btn-primary fade-up" data-delay="3">
+          Stock Up Now
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>
+      &copy; 2026 Apple Jacks &mdash; <a href="index.html">Back to Home</a> &mdash;
+      <a href="cereal-ranking.html">Cereal Ranking</a>
+    </p>
+  </footer>
+
+  <!-- ── Fade-up IntersectionObserver ── -->
+  <script>
+    (function () {
+      const elements = document.querySelectorAll('.fade-up');
+      if (!elements.length) return;
+
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      elements.forEach(function (el) {
+        observer.observe(el);
+      });
+
+      // Trigger hero elements immediately (already in view)
+      document.querySelectorAll('#hero .fade-up').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    })();
+  </script>
+
+</body>
+</html>
